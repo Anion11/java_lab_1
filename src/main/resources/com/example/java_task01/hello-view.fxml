@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 
 <VBox alignment="CENTER" prefHeight="330.0" prefWidth="642.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_task01.HelloController">
     <padding>
@@ -23,7 +24,8 @@
         <Label accessibleText="Рост" text="Рост" GridPane.rowIndex="1" />
         <TextField fx:id="rost" promptText="Введите свой рост" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         <Label text="ИМТ" GridPane.rowIndex="2" />
-        <Slider fx:id="imt" majorTickUnit="3.0" max="40.0" min="16.0" showTickLabels="true" showTickMarks="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Rectangle fx:id="progressBar" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="15.0" stroke="BLACK" strokeType="INSIDE" width="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Circle fx:id="circle" radius="11.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
     </GridPane>
      <Button fx:id="btnRes" alignment="CENTER" mnemonicParsing="false" onAction="#onCalcBMI" prefHeight="25.0" prefWidth="180.0" text="Рассчитать" />
    <Label fx:id="msg" text=" " />
