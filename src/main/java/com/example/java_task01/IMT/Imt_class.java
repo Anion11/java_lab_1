@@ -1,4 +1,4 @@
-package com.example.java_task01;
+package com.example.java_task01.IMT;
 
 public class Imt_class {
     private double mass_p;

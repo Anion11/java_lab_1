@@ -1,12 +1,12 @@
-package com.example.java_task01;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
+package com.example.java_task01.ui.builder;
+import com.example.java_task01.ui.Indicator;
+import com.example.java_task01.ui.builder.Builder;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
-public class BuilderIndicatorMini implements Builder{
+public class BuilderIndicatorMini implements Builder {
     Indicator indicator = new Indicator();
     Pane pane = new Pane();
     @Override

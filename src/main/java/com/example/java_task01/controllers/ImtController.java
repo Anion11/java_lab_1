@@ -1,14 +1,15 @@
-package com.example.java_task01;
+package com.example.java_task01.controllers;
+import com.example.java_task01.ui.builder.Director;
+import com.example.java_task01.IMT.Imt_class;
+import com.example.java_task01.ui.Indicator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
-public class HelloController {
+public class ImtController {
     private final Imt_class bmi = new Imt_class();
     public TextField mass;
     public TextField rost;
@@ -31,8 +32,9 @@ public class HelloController {
         else if (bmi.getImt() < 35) color = Color.rgb(246, 204, 204);
         else if (bmi.getImt() < 40) color = Color.rgb(255, 134, 134);
         else color = Color.RED;
+        int currentValue = Math.min((int) bmi.getImt(), 50);
         indicator = new Indicator();
-        indicator = director.Constr(color,(int)bmi.getImt()*6);
+        indicator = director.Constr(color,currentValue*6);
         indicator.show(panel);
         msg.setText(bmi.toString());
     }

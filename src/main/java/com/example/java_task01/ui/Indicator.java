@@ -1,4 +1,4 @@
-package com.example.java_task01;
+package com.example.java_task01.ui;
 
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
