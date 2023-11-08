@@ -1,7 +1,7 @@
 package com.example.java_task01.controllers;
-import com.example.java_task01.ui.builder.Director;
+import com.example.java_task01.builder.Director;
 import com.example.java_task01.IMT.Imt_class;
-import com.example.java_task01.ui.Indicator;
+import com.example.java_task01.builder.Indicator;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -34,7 +34,7 @@ public class ImtController {
         else color = Color.RED;
         int currentValue = Math.min((int) bmi.getImt(), 50);
         indicator = new Indicator();
-        indicator = director.Constr(color,currentValue*6);
+        indicator = director.Constr(color,currentValue*6, "" + bmi.getImt());
         indicator.show(panel);
         msg.setText(bmi.toString());
     }

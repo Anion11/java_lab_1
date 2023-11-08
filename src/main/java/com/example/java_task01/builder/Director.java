@@ -1,14 +1,13 @@
-package com.example.java_task01.ui.builder;
+package com.example.java_task01.builder;
 
-import com.example.java_task01.ui.builder.BuilderIndicatorMini;
-import com.example.java_task01.ui.Indicator;
 import javafx.scene.paint.Color;
 
 public class Director {
     BuilderIndicatorMini builder = new BuilderIndicatorMini();
-    public Indicator Constr(Color color, double centerX){
+    public Indicator Constr(Color color, double centerX, String bmi){
         builder.lineBounds(300, 15, color);
         builder.lineCircle(11, centerX);
+        builder.addText(bmi);
         return builder.Build();
     }
 }
